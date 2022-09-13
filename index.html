@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+ rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+  crossorigin="anonymous">
+
+  <script>
+    const quoteBank=[
+    
+  {
+    "text": "Genius is one percent inspiration and ninety-nine percent perspiration.",
+    "author": "Thomas Edison"
+  },
+  {
+    "text": "You can observe a lot just by watching.",
+    "author": "Yogi Berra"
+  },
+  {
+    "text": "A house divided against itself cannot stand.",
+    "author": "Abraham Lincoln"
+  },
+  {
+    "text": "Difficulties increase the nearer we get to the goal.",
+    "author": "Johann Wolfgang von Goethe"
+  },
+  {
+    "text": "Fate is in your hands and no one elses",
+    "author": "Byron Pulsifer"
+  },
+  {
+    "text": "Be the chief but never the lord.",
+    "author": "Lao Tzu"
+  },
+  {
+    "text": "Nothing happens unless first we dream.",
+    "author": "Carl Sandburg"
+  },
+  {
+    "text": "All children are artists. The problem is how to remain an artist once he grows up.",
+    "author": "Pablo Picasso"
+  },
+  {
+    "text": "Either I will find a way, or I will make one.",
+    "author": "Philip Sidney"
+  },
+  {
+    "text": "He who knows that enough is enough will always have enough.",
+    "author": "Lao Tzu"
+  },
+  {
+    "text": "The only way to have a friend is to be one.",
+    "author": "Ralph Emerson"
+  },
+  {
+    "text": "If we had no winter, the spring would not be so pleasant; if we did not sometimes taste of adversity, prosperity would not be so welcome.",
+    "author": "Anne Bradstreet"
+  },
+  {
+    "text": "Joy is what happens to us when we allow ourselves to recognize how good things really are.",
+    "author": "Marianne Williamson"
+  },
+  {
+    "text": "Your vision will become clear only when you can look into your own heart. Who looks outside, dreams; who looks inside, awakes.",
+    "author": "Carl Jung"
+  },
+  {
+    "text": "There is never enough time to do everything, but there is always enough time to do the most important thing.",
+    "author": "Brian Tracy"
+  },
+  {
+    "text": "You really can change the world if you care enough.",
+    "author": "Marian Edelman"
+  },
+  {
+    "text": "What you are is what you have been. What you will be is what you do now.",
+    "author": "Buddha"
+  },
+  {
+    "text": "Our lives are the only meaningful expression of what we believe and in Whom we believe. And the only real wealth, for any of us, lies in our faith.",
+    "author": "Gordon Hinckley"
+  },
+  {
+    "text": "There surely is in human nature an inherent propensity to extract all the good out of all the evil.",
+    "author": "Benjamin Haydon"
+  },
+  {
+    "text": "Music in the soul can be heard by the universe.",
+    "author": "Lao Tzu"
+  },
+  {
+    "text": "What we see depends mainly on what we look for.",
+    "author": "John Lubbock"
+  },
+  {
+    "text": "To hell with circumstances; I create opportunities.",
+    "author": "Bruce Lee"
+  },
+  {
+    "text": "The truest greatness lies in being kind, the truest wisdom in a happy mind.",
+    "author": "Ella Wilcox"
+  },
+  {
+    "text": "An ounce of emotion is equal to a ton of facts.",
+    "author": "John Junor"
+  },
+  {
+    "text": "We need to find the courage to say NO to the things and people that are not serving us if we want to rediscover ourselves and live our lives with authenticity.",
+    "author": "Barbara De Angelis"
+  },
+  {
+    "text": "Great is the art of beginning, but greater is the art of ending.",
+    "author": "Lazurus Long"
+  },
+  {
+    "text": "Simply put, you believer that things or people make you unhappy, but this is not accurate. You make yourself unhappy.",
+    "author": "Wayne Dyer"
+  },
+  {
+    "text": "Nothing will work unless you do.",
+    "author": "Maya Angelou"
+  },
+  {
+    "text": "Our ability to achieve happiness and success depends on the strength of our wings.",
+    "author": "Catherine Pulsifer"
+  },
+  {
+    "text": "To go against the dominant thinking of your friends, of most of the people you see every day, is perhaps the most difficult act of heroism you can perform.",
+    "author": "Theodore H. White"
+  },
+  {
+    "text": "Gratitude makes sense of our past, brings peace for today, and creates a vision for tomorrow.",
+    "author": "Melody Beattie"
+  },
+  {
+    "text": "Into each life rain must fall but rain can be the giver of life and it is all in your attitude that makes rain produce sunshine.",
+    "author": "Byron Pulsifer"
+  },
+  {
+    "text": "We are all inclined to judge ourselves by our ideals; others, by their acts.",
+    "author": "Harold Nicolson"
+  },
+  {
+    "text": "Nothing is a waste of time if you use the experience wisely.",
+    "author": "Rodin"
+  },
+  {
+    "text": "If one way be better than another, that you may be sure is natures way.",
+    "author": "Aristotle"
+  },
+  {
+    "text": "Here is one quality that one must possess to win, and that is definiteness of purpose, the knowledge of what one wants, and a burning desire to possess it.",
+    "author": "Napoleon Hill"
+  },
+  {
+    "text": "It is not in the stars to hold our destiny but in ourselves.",
+    "author": "William Shakespeare"
+  },
+  {
+    "text": "Using the power of decision gives you the capacity to get past any excuse to change any and every part of your life in an instant.",
+    "author": "Tony Robbins"
+  },
+  {
+    "text": "I will prepare and some day my chance will come.",
+    "author": "Abraham Lincoln"
+  },
+  {
+    "text": "Sometimes the cards we are dealt are not always fair. However you must keep smiling and moving on.",
+    "author": "Tom Jackson"
+  }
+
+  ]
+
+    
+        window.onload=init
+        function init (){
+        generateCode()
+
+        }
+        function generateCode(){
+   //console.log("hi")
+   let quoteSize=quoteBank.length;
+   let randomIndex=Math.floor(Math.random()*quoteSize);
+   let randomQuoteData=quoteBank[randomIndex]
+   let twiterLink="https://twitter.com/intent/tweet?hashtags=quotes&amp;related=freecodecamp&amp;text=%22I%E2%80%99ve%20missed%20more%20than%209000%20shots%20in%20my%20career.%20I%E2%80%99ve%20lost%20almost%20300%20games.%2026%20times%20I%E2%80%99ve%20been%20trusted%20to%20take%20the%20game%20winning%20shot%20and%20missed.%20I%E2%80%99ve%20failed%20over%20and%20over%20and%20over%20again%20in%20my%20life.%20And%20that%20is%20why%20I%20succeed.%22%20Michael%20Jordan"
+   document.getElementById("tweet-quote").href=twiterLink
+   document.getElementById("text").innerText=randomQuoteData.text
+
+            document.getElementById("author").innerText=randomQuoteData.author
+        }
+    </script>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Random Quote Machine</title>
+    <style>
+      *{
+          font-size: 1.5rem;
+          margin: 20px 20px 20px 20px;
+          text-align: center;
+      }
+      #author{
+        
+  text-align: center;
+      }
+  </style> 
+  </head>
+  <body>
+   
+    <div class="container ">
+      <div class="row">
+       <div class="col md-12 sm-12 xl-12">
+    <wrapper id="quote-box">
+   
+    
+      <div class="card text-center">
+        
+        <div class="card-body">
+          <div class="card-footer text-muted">
+          Random Quote Machine
+          </div>
+          <div id="text"></div>
+          <div id="author"></div>
+          <button id="new-quote" class="btn btn-block btn-success"onclick="generateCode();">New Quote</button>
+          <a class="btn btn-block btn-primary" id="tweet-quote" title="Tweet this quote!" target="_blank" >Tweet Quote</a>
+          </a>
+        </wrapper>
+       </div>
+       </div>
+        </div>
+      </div>
+
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" 
+integrity="sha384-7VP bUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"></script>
+
+  </body>
+</html>
